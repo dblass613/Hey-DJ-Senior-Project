@@ -1,0 +1,6 @@
+colors:
+
+1)Green #1B998B
+2)Pink #ED217C
+3)Yellow #FFFD82
+4)Black #000000
