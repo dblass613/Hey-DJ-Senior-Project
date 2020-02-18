@@ -34,7 +34,7 @@ function Login() {
               <BrowserRouter>
                 <Link to = "/CreateAccount"> Create One Here!</Link>
                 <Switch>
-                  <Route path = "/CreateAccount" component={CreateAccount}>
+                  <Route path = "/createAccount" component={CreateAccount}>
                   </Route>
                 </Switch>
               </BrowserRouter>
