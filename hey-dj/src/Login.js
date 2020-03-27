@@ -6,42 +6,43 @@ import {
   Switch,
 } from 'react-router-dom';
 import CreateAccount from './CreateAccount';
-import './stylesheets/bootstrap.css';
-import './stylesheets/custom.css';
+import './Stylesheets/login.css';
+import App from './App';
+import Logo from './Images/HeyDJLogoWhite.png';
+import Dashboard from './Dashboard';
 
-
-
-function Login() {
-  return (
-    <div className="container d-flex justify-content-center h-100">
+const Login = () =>
+  <div className = "login-body">
+      <div className="container d-flex justify-content-center h-100">
         <div className="my-auto">
             <div className="d-flex justify-content-center my-3">
-                <h1>Hey DJ!</h1>
+              <div className= "Logo-container">
+                <img className= "Logo-img" src={Logo}/>
+              </div>
             </div>
+            <hr className= "mbm" color = "#1B998B"></hr>
             <form>
-                <div className="my-3">
-                    <input type="text" name="" className="form-control" placeholder="username"/>
+                <div className="mbm" >
+                    <input type="text" name="userText" className="form-control Login-text" placeholder="username"/>
                 </div>
-                <div className="my-3">
-                    <input type="password" name="" className="form-control" placeholder="password"onChange=""/>
+                <div className="mbm">
+                    <input type="password" name="passText" className="form-control Login-text" placeholder="password"/>
                 </div>
                 <div className="d-flex justify-content-center my-3">
-                    <button type="button" name="" className="btn">Login</button>
+                    <button type="button" name="Loginbtn" className="Login-button" onclick = {Dashboard}>Login</button>
                 </div>
             </form>
-            <div className="my-3">
-                Don't have an account?
-              <BrowserRouter>
-                <Link to = "/CreateAccount"> Create One Here!</Link>
-                <Switch>
-                  <Route path = "/createAccount" component={CreateAccount}>
-                  </Route>
-                </Switch>
-              </BrowserRouter>
+
+            <hr className= "mtm" color = "#1B998B"></hr>
+
+            <div>
+                <p> Don't have an account?
+                  <Link to = "/create" className = "Login-link"> Create One Here!</Link>
+                </p>
             </div>
         </div>
+      </div>
     </div>
-  );
-}
+
 
 export default Login;
