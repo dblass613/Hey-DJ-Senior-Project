@@ -1,0 +1,48 @@
+.Login-body{
+	width: inherit;
+	height: inherit;
+}
+
+.Login-button{
+	background-color: white;
+	padding: 4px 30PX;
+	border-radius: 5px;
+	border-color: #1B998B;
+	color: #1B998B;
+	font-family: inherit;
+}
+
+.mbm{ /*margin bottom medium */
+	margin-bottom: 40px;
+}
+
+.mtm{ /*margin bottom medium */
+	margin-top: 40px;
+}
+
+.Login-link{
+	color: #1B998B;
+}
+
+.Login-button:focus{
+	box-shadow: 0px 0px 0px 1px #1B998B;
+}
+
+.Login-text{
+	text-align:center;
+}
+
+.Login-text:focus{
+	box-shadow: 0px 0px 0px 1px #1B998B;
+}
+
+.Logo-container{
+	height: 18rem;
+	width: auto;
+	display: block;
+}
+
+.Logo-img{
+	height: inherit;
+	width: auto;
+}

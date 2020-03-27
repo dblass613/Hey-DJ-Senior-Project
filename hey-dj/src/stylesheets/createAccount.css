@@ -1,0 +1,11 @@
+.CreateAccount-form-container{
+  width: 500px !important;
+  text-align: center;
+  align-self: center !important;
+  justify-content: center;
+}
+
+ .body-wrapper{
+   align-content: center;
+   width: auto;
+ }
