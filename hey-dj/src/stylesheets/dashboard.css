@@ -1,0 +1,13 @@
+.Navigation-container{
+	height: 10%;
+	width: 100%;
+	margin: 0rem 1rem 0rem 1rem;
+}
+
+.Navigation-link{
+	display: inline-block;
+	align-content: center;
+	height: 5rem;
+	width: 5rem;
+
+}
