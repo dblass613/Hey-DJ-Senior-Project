@@ -8,7 +8,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import CreateAccount from './CreateAccount';
-import Login from './Login'
+import Login from './Login';
 import Dashboard from './Dashboard';
 
 function App() {

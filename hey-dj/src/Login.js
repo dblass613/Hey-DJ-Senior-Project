@@ -23,7 +23,7 @@ const Login = () =>
             <hr className= "mbm" color = "#1B998B"></hr>
             <form>
                 <div className="mbm" >
-                    <input type="text" name="userText" className="form-control Login-text" placeholder="username"/>
+                    <input type="text" name="userText" className="form-control Login-text" placeholder="lalalalalalalala"/>
                 </div>
                 <div className="mbm">
                     <input type="password" name="passText" className="form-control Login-text" placeholder="password"/>
