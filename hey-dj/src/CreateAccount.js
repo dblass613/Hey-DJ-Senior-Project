@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Stylesheets/bootstrap.css';
 import './Stylesheets/createAccount.css';
 import Logo from './Images/HeyDJLogoWhite.png';
 
