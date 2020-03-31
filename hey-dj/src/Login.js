@@ -10,7 +10,7 @@ import Logo from './Images/HeyDJLogoWhite.png';
 import Dashboard from './Dashboard';
 
 const Login = () =>
-  <div className="container find d-flex align-items-center flex-column">
+  <div className="container d-flex align-items-center flex-column">
 
     <img className="logo-img my-3" src={Logo} />
 
