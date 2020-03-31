@@ -15,8 +15,8 @@ const Login = () =>
     <img className="logo-img my-3" src={Logo} />
 
     <form className="d-flex flex-column align-items-center">
-      <input type="text" name="userText" className="form-control login-text mb-4" placeholder="username" />
-      <input type="password" name="passText" className="form-control login-text my-4" placeholder="password" />
+      <input type="text" name="userText" className="form-control login-text mb-4" placeholder="Username" />
+      <input type="password" name="passText" className="form-control login-text my-4" placeholder="Password" />
       <button type="button" name="Loginbtn" className="login-button my-4" onclick={Dashboard}>Login</button>
     </form>
 
