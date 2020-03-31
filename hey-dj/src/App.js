@@ -10,6 +10,7 @@ import setAuthToken from "./utils/setAuthToken";
 import {logoutUser, setCurrentUser} from "./actions/authActions";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import Profile from "./components/Profile";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -41,6 +42,8 @@ class App extends Component {
                      <NavigationBar/>
                      <Route exact path="/register" component={Register}/>
                      <Route exact path="/login" component={Login}/>
+                     <Route exact path="/profile" component={Profile}/>
+
                      <Switch>
                          <PrivateRoute exact path="/dashboard" component={Dashboard} />
                      </Switch>

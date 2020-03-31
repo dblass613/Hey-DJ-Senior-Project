@@ -4,6 +4,7 @@ import {Col, Row} from "react-bootstrap";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {loginUser} from "../actions/authActions";
+import Button from "react-bootstrap/esm/Button";
 
 class Login extends Component {
     constructor() {
@@ -53,6 +54,12 @@ class Login extends Component {
 
             <div style={{paddingTop:'100px'}}>
 
+
+                <Button
+                    href="http://localhost:5000/callback"
+                >
+                    Sign in with Spotify
+                </Button>
                 <Row >
                     <Col></Col>
                     <Col md={5}>
