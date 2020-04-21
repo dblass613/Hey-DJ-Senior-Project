@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
+import NavigationBar from "./components/NavigationBar";
+import Register from "./auth/Register";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Login from "./auth/Login";
+import {Provider} from "react-redux";
+import store from "./store";
+import jwt_decode from "jwt-decode";
+import setAuthToken from "./utils/setAuthToken";
+import {logoutUser, setCurrentUser} from "./actions/authActions";
+import PrivateRoute from "./components/private-route/PrivateRoute";
+import Dashboard from "./components/dashboard/Dashboard";
+import Profile from "./components/Profile";
 import logo from './logo.svg';
 import './Stylesheets/App.css';
-import {
-  BrowserRouter,
-  Link,
-  Route,
-  Switch,
-} from 'react-router-dom';
 import CreateAccount from './CreateAccount';
 import Login from './Login';
 import Dashboard from './Dashboard';
@@ -15,20 +21,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <BrowserRouter>
-        <Switch>
-          <Route exact={true} path="/" component = {Login}>
-          </Route>
-          <Route path="/create" component = {CreateAccount}>
-          </Route>
-          <Route path="/dashboard" component = {Dashboard}>
-          </Route>
-        </Switch>
-      </BrowserRouter>
-
+      <Provider store={store}>
+        <BrowserRouter>
+          <Switch>
+            <Route exact={true} path="/" component = {Login}>
+            </Route>
+            <Route exact path="/create" component = {CreateAccount}> //register is the same
+            </Route>
+            <Route exact path="/dashboard" component = {Dashboard}>
+            </Route>
+          </Switch>
+        </BrowserRouter>
+        </Provider>
       </header>
-    </div>
-  );
+      </div>
+    )
 }
 
 export default App;
