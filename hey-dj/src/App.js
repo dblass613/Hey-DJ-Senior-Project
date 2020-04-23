@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import './Stylesheets/bootstrap.css';
 import './Stylesheets/App.css';
 import {
   BrowserRouter,
@@ -14,19 +14,16 @@ import Dashboard from './Dashboard';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
       <BrowserRouter>
         <Switch>
-          <Route exact={true} path="/" component = {Login}>
+          <Route exact={true} path="/" component={Login}>
           </Route>
-          <Route path="/create" component = {CreateAccount}>
+          <Route path="/create" component={CreateAccount}>
           </Route>
-          <Route path="/dashboard" component = {Dashboard}>
+          <Route path="/dashboard" component={Dashboard}>
           </Route>
         </Switch>
       </BrowserRouter>
-
-      </header>
     </div>
   );
 }
