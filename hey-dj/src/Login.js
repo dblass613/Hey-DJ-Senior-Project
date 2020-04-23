@@ -6,7 +6,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import CreateAccount from './CreateAccount';
-import './Stylesheets/login.css';
+import '../Stylesheets/login.css';
 import App from './App';
 import Logo from './Images/HeyDJLogoWhite.png';
 import Dashboard from './Dashboard';

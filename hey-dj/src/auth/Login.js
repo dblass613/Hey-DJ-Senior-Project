@@ -5,6 +5,17 @@ import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {loginUser} from "../actions/authActions";
 import Button from "react-bootstrap/esm/Button";
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import CreateAccount from '../CreateAccount';
+import '../Stylesheets/login.css';
+import App from '../App';
+import Logo from '../Images/HeyDJLogoWhite.png';
+import Dashboard from '../Dashboard';
 
 class Login extends Component {
     constructor() {
@@ -52,34 +63,51 @@ class Login extends Component {
     render() {
         return (
 
-            <div style={{paddingTop:'100px'}}>
+          <div className = "login-body">
+              <div className="container d-flex justify-content-center h-100">
+                <div className="my-auto">
+                    <div className="d-flex justify-content-center my-3">
+                      <div className= "Logo-container">
+                        <img className= "Logo-img" src={Logo}/>
+                      </div>
+                    </div>
 
+                    <hr className= "mbm" color = "#1B998B"></hr>
 
-                <Button
-                    href="http://localhost:5000/callback"
-                >
-                    Sign in with Spotify
-                </Button>
-                <Row >
-                    <Col></Col>
-                    <Col md={5}>
-                        <Card>
-                            <div>
-                                <form onSubmit={this.onSubmit}>
-                                    <h3 align="center">Login</h3>
+                    <form onSubmit = {this.onSubmit}>
+                        <div className="mbm" >
+                            <input
+                              type="Email"
+                              id="email"
+                              className="form-control Login-text"
+                              placeholder="Enter Email"/>
+                              value={this.state.email}
+                              error={this.state.errors.email}
+                        </div>
+                        <div className="mbm">
+                            <input type="Password" name="passText" className="form-control Login-text" placeholder="Password"/>
+                        </div>
+                        <div className="d-flex justify-content-center my-3">
+                            <button type="submit" name="Loginbtn" className="Login-button">Login</button>
+                        </div>
+                    </form>
 
+                    <hr className= "mtm" color = "#1B998B"></hr>
+                    <Button
+                        href="http://localhost:5000/callback"
+                    >
+                        Sign in with Spotify
+                    </Button>
+                    <div>
+                        <p> Don't have an account?
+                          <Link to = "/create" className = "Login-link"> Create One Here!</Link>
+                        </p>
+                    </div>
+                </div>
+              </div>
+            </div>
 
-                                    <div className="form-group">
-                                        <label>Email address</label>
-                                        <input type="email"
-                                               className="form-control"
-                                               placeholder="Enter email"
-                                               onChange={this.onChange}
-                                               value={this.state.email}
-                                               error={this.state.errors.email}
-                                               id="email"
-                                        />
-                                    </div>
+                            
 
                                     <div className="form-group">
                                         <label>Password</label>
