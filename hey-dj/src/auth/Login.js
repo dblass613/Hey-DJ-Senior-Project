@@ -1,22 +1,21 @@
 import React, {Component} from "react";
-import Card from "react-bootstrap/Card";
-import {Col, Row} from "react-bootstrap";
-import PropTypes from "prop-types";
-import {connect} from "react-redux";
-import {loginUser} from "../actions/authActions";
-import Button from "react-bootstrap/esm/Button";
 import {
   BrowserRouter,
   Link,
   Route,
   Switch,
 } from 'react-router-dom';
+import Card from "react-bootstrap/Card";
+import {Col, Row} from "react-bootstrap";
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
+import {loginUser} from "../actions/authActions";
+import Button from "react-bootstrap/esm/Button";
 import CreateAccount from '../CreateAccount';
-import '../Stylesheets/login.css';
+import "../Stylesheets/login.css";
 import App from '../App';
 import Logo from '../Images/HeyDJLogoWhite.png';
 import Dashboard from '../Dashboard';
-
 class Login extends Component {
     constructor() {
         super();
@@ -32,6 +31,8 @@ class Login extends Component {
         // If logged in and user navigates to Login page, should redirect them to dashboard
         if (this.props.auth.isAuthenticated) {
             this.props.history.push("/dashboard");
+        }else{
+
         }
     }
     componentWillReceiveProps(nextProps) {
@@ -62,78 +63,59 @@ class Login extends Component {
 
     render() {
         return (
+              <div className="Full-width">
+                  <div className= "Logo-container justify-content-center">
+                    <img className= "Logo-img" src={Logo}/>
+                  </div>
+                  <hr className= "mbm Full-width" color = "#1B998B"></hr>
+                  <div className="container Login-body Screen-format my-3">
 
-          <div className = "login-body">
-              <div className="container d-flex justify-content-center h-100">
-                <div className="my-auto">
-                    <div className="d-flex justify-content-center my-3">
-                      <div className= "Logo-container">
-                        <img className= "Logo-img" src={Logo}/>
-                      </div>
-                    </div>
-
-                    <hr className= "mbm" color = "#1B998B"></hr>
-
-                    <form onSubmit = {this.onSubmit}>
+                    <form className ="justify-content-center" onSubmit = {this.onSubmit}>
                         <div className="mbm" >
                             <input
                               type="Email"
                               id="email"
                               className="form-control Login-text"
-                              placeholder="Enter Email"/>
+                              placeholder="Enter Email"
+                              onChange ={this.onChange}
                               value={this.state.email}
                               error={this.state.errors.email}
+                            />
                         </div>
                         <div className="mbm">
-                            <input type="Password" name="passText" className="form-control Login-text" placeholder="Password"/>
+                            <input
+                                type="Password"
+                                id="password"
+                                className="form-control Login-text"
+                                placeholder="Enter Password"
+                                onChange ={this.onChange}
+                                value={this.state.password}
+                                error={this.state.errors.password}
+                              />
                         </div>
+
                         <div className="d-flex justify-content-center my-3">
-                            <button type="submit" name="Loginbtn" className="Login-button">Login</button>
+                            <button type="submit" className="Login-button">Login</button>
                         </div>
                     </form>
 
                     <hr className= "mtm" color = "#1B998B"></hr>
-                    <Button
-                        href="http://localhost:5000/callback"
+                    <div className = "d-flex justify-content-center mbs">
+                    <button
+                      className = "Spotify-btn "
+                      href="http://localhost:5000/callback"
                     >
-                        Sign in with Spotify
-                    </Button>
-                    <div>
+                    <span> <i className="fa fab fa-spotify Spotify-icon"> </i> </span>
+                        Continue with Spotify
+                    </button>
+                    </div>
+                    <div className ="d-flex justify-content-center">
                         <p> Don't have an account?
-                          <Link to = "/create" className = "Login-link"> Create One Here!</Link>
+                          <Link to = "/register"  className = "Login-link"> Create One Here!</Link>
                         </p>
                     </div>
                 </div>
               </div>
-            </div>
-
-                            
-
-                                    <div className="form-group">
-                                        <label>Password</label>
-                                        <input type="password"
-                                               className="form-control"
-                                               placeholder="Enter password"
-                                               onChange={this.onChange}
-                                               value={this.state.password}
-                                               error={this.state.errors.password}
-                                               id="password"
-                                        />
-                                    </div>
-
-                                    <button type="submit" className="btn btn-primary btn-block">Sign In</button>
-                                    <p className="forgot-password text-right">
-                                        Already registered <a href="/login">sign in?</a>
-                                    </p>
-                                </form>
-                            </div>
-                        </Card>
-                    </Col>
-                    <Col></Col>
-                </Row>
-
-            </div>
-
         );
     }
 }

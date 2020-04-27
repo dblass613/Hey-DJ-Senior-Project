@@ -5,6 +5,10 @@ import {Col, Row} from "react-bootstrap";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
 import {registerUser} from "../actions/authActions";
+import ReactDOM from 'react-dom';
+import '../Stylesheets/bootstrap.css';
+import '../Stylesheets/createAccount.css';
+import Logo from "../Images/HeyDJLogoWhite.png";
 
 class Register extends Component {
     constructor() {
@@ -54,82 +58,72 @@ class Register extends Component {
     render() {
         return (
 
-            <div style={{paddingTop:'100px'}}>
+          <div className = "body-wrapper">
+              <div className="d-flex justify-content-center my-3">
+                <div className= "Logo-container">
+                  <img className= "Logo-img" src={Logo}/>
+                </div>
+              </div>
+              <hr className= "mbm" color = "#1B998B"></hr>
+              <div class="CreateAccount-form-container">
+                <div class="d-flex justify-content-center my-3 form-group">
+                    <h1>Sign Up</h1>
+                </div>
+                <form onSubmit={this.onSubmit}>
 
-            <Row >
-                <Col></Col>
-                <Col md={6}>
-                    <Card>
-                        <div className="padded">
-                            <form onSubmit={this.onSubmit}>
-                                <h3 align="center">Sign Up</h3>
+                  <div class="my-3 form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Name"
+                          onChange={this.onChange}
+                          value={this.state.name}
+                          error={this.state.errors.name}
+                          id="name"
 
-                                <div className="form-group">
-                                    <label htmlFor="name">Name</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="Name"
-                                        onChange={this.onChange}
-                                        value={this.state.name}
-                                        error={this.state.errors.name}
-                                        id="name"
-
-                                    />
-                                </div>
-
-                                <div className="form-group">
-                                    <label>Email address</label>
-                                    <input type="email"
-                                           className="form-control"
-                                           placeholder="Enter email"
-                                           onChange={this.onChange}
-                                           value={this.state.email}
-                                           error={this.state.errors.email}
-                                           id="email"
-                                    />
-                                </div>
-
-                                <div className="form-group">
-                                    <label>Password</label>
-                                    <input type="password"
-                                           className="form-control"
-                                           placeholder="Enter password"
-                                           onChange={this.onChange}
-                                           value={this.state.password}
-                                           error={this.state.errors.password}
-                                           id="password"
-                                    />
-                                </div>
-
-                                <div className="form-group">
-                                    <label>Re-Enter Password</label>
-                                    <input type="password"
-                                           className="form-control"
-                                           placeholder="Enter password"
-                                           onChange={this.onChange}
-                                           value={this.state.password2}
-                                           error={this.state.errors.password2}
-                                           id="password2"
-                                    />
-                                </div>
-
-                                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
-                                <p className="forgot-password text-right">
-                                    Already registered <a href="#">sign in?</a>
-                                </p>
-                            </form>
-                        </div>
-                    </Card>
-                </Col>
-                <Col></Col>
-            </Row>
-
+                      />
+                  </div>
+                  <div class="my-3 form-group">
+                  <input type="email"
+                         className="form-control"
+                         placeholder="Enter email"
+                         onChange={this.onChange}
+                         value={this.state.email}
+                         error={this.state.errors.email}
+                         id="email"
+                  />                  </div>
+                  <div class="my-3 form-group">
+                      <input type="password"
+                             className="form-control"
+                             placeholder="Enter password"
+                             onChange={this.onChange}
+                             value={this.state.password}
+                             error={this.state.errors.password}
+                             id="password"
+                      />
+                  </div>
+                  <div class="my-3 form-group">
+                  <input type="password"
+                         className="form-control"
+                         placeholder="Re-Enter password"
+                         onChange={this.onChange}
+                         value={this.state.password2}
+                         error={this.state.errors.password2}
+                         id="password2"
+                  />                  </div>
+                  <div class="d-flex justify-content-center my-3 form-group">
+                      <button type="submit" class="SignUp-button">Sign Up</button>
+                  </div>
+                  <p className="forgot-password text-right">
+                      Already registered <a href="/">sign in?</a>
+                  </p>
+              </form>
             </div>
-
+          </div>
         );
     }
 }
+
 
 Register.propTypes = {
     registerUser: PropTypes.func.isRequired,

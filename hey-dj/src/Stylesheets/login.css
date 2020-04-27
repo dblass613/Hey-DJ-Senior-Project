@@ -1,6 +1,12 @@
+.Screen-format{
+	width: 700px;
+
+
+}
+
 .Login-body{
-	width: inherit;
 	height: inherit;
+	display: block;
 }
 
 .Login-button{
@@ -12,6 +18,13 @@
 	font-family: inherit;
 }
 
+.Full-width{
+	width: 100%;
+}
+
+.mbs{
+	margin-bottom: 20px;
+}
 .mbm{ /*margin bottom medium */
 	margin-bottom: 40px;
 }
@@ -29,7 +42,8 @@
 }
 
 .Login-text{
-	text-align:center;
+	text-align: left;
+	font-family: helvetica;
 }
 
 .Login-text:focus{
@@ -37,12 +51,25 @@
 }
 
 .Logo-container{
-	height: 18rem;
+	height: 170px;
 	width: auto;
-	display: block;
+	display: flex;
 }
 
 .Logo-img{
 	height: inherit;
 	width: auto;
+}
+
+.Spotify-btn{
+	background-color: green;
+	border-color: green;
+	border-style: solid;
+	border-radius: 20px;;
+	color: white;
+	align-self: center;
+}
+
+.Spotify-icon{
+	background-color: green;
 }

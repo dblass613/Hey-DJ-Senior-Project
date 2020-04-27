@@ -9,3 +9,12 @@
    align-content: center;
    width: auto;
  }
+
+ .SignUp-button{
+ 	background-color: white;
+ 	padding: 4px 30PX;
+ 	border-radius: 5px;
+ 	border-color: #1B998B;
+ 	color: #1B998B;
+ 	font-family: inherit;
+ }

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import NavigationBar from "./components/NavigationBar";
+//import NavigationBar from "./components/NavigationBar";
 import Register from "./auth/Register";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Login from "./auth/Login";
 import {Provider} from "react-redux";
 import store from "./store";
@@ -13,9 +13,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Profile from "./components/Profile";
 import logo from './logo.svg';
 import './Stylesheets/App.css';
-import CreateAccount from './CreateAccount';
-import Login from './Login';
-import Dashboard from './Dashboard';
+import CreateAccount from './auth/Register';
 
 function App() {
   return (
@@ -26,7 +24,7 @@ function App() {
           <Switch>
             <Route exact={true} path="/" component = {Login}>
             </Route>
-            <Route exact path="/create" component = {CreateAccount}> //register is the same
+            <Route exact path="/register" component = {Register}> 
             </Route>
             <Route exact path="/dashboard" component = {Dashboard}>
             </Route>
