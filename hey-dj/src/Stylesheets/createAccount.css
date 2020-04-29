@@ -18,3 +18,8 @@
  	color: #1B998B;
  	font-family: inherit;
  }
+
+.errorTxt{
+  color: red;
+  font-size: 14px;
+}

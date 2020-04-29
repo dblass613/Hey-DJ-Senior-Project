@@ -31,8 +31,6 @@ class Login extends Component {
         // If logged in and user navigates to Login page, should redirect them to dashboard
         if (this.props.auth.isAuthenticated) {
             this.props.history.push("/dashboard");
-        }else{
-
         }
     }
     componentWillReceiveProps(nextProps) {
@@ -43,6 +41,7 @@ class Login extends Component {
             this.setState({
                 errors: nextProps.errors
             });
+            document.getElementById("errorTxt").innerText="Incorrect username or password";
         }
     }
 
@@ -97,13 +96,15 @@ class Login extends Component {
                         <div className="d-flex justify-content-center my-3">
                             <button type="submit" className="Login-button">Login</button>
                         </div>
+                        <label className="errorTxt" id = "errorTxt">
+                        </label>
                     </form>
 
                     <hr className= "mtm" color = "#1B998B"></hr>
                     <div className = "d-flex justify-content-center mbs">
                     <button
-                      className = "Spotify-btn "
-                      href="http://localhost:5000/callback"
+                      href="www.google.com"
+                      className = "Spotify-btn"
                     >
                     <span> <i className="fa fab fa-spotify Spotify-icon"> </i> </span>
                         Continue with Spotify

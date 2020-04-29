@@ -27,7 +27,7 @@ class Register extends Component {
         // If logged in and user navigates to Register page, should redirect them to dashboard
         if (this.props.auth.isAuthenticated) {
             this.props.history.push("/dashboard");
-        }
+      }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -35,6 +35,7 @@ class Register extends Component {
             this.setState({
                 errors: nextProps.errors
             });
+            console.log(nextProps.errors);
         }
     }
 
@@ -65,13 +66,13 @@ class Register extends Component {
                 </div>
               </div>
               <hr className= "mbm" color = "#1B998B"></hr>
-              <div class="CreateAccount-form-container">
-                <div class="d-flex justify-content-center my-3 form-group">
+              <div className="CreateAccount-form-container">
+                <div className="d-flex justify-content-center my-3 form-group">
                     <h1>Sign Up</h1>
                 </div>
                 <form onSubmit={this.onSubmit}>
 
-                  <div class="my-3 form-group">
+                  <div className="my-3 form-group">
                         <input
                           type="text"
                           className="form-control"
@@ -83,7 +84,7 @@ class Register extends Component {
 
                       />
                   </div>
-                  <div class="my-3 form-group">
+                  <div className="my-3 form-group">
                   <input type="email"
                          className="form-control"
                          placeholder="Enter email"
@@ -92,7 +93,7 @@ class Register extends Component {
                          error={this.state.errors.email}
                          id="email"
                   />                  </div>
-                  <div class="my-3 form-group">
+                  <div className="my-3 form-group">
                       <input type="password"
                              className="form-control"
                              placeholder="Enter password"
@@ -102,21 +103,24 @@ class Register extends Component {
                              id="password"
                       />
                   </div>
-                  <div class="my-3 form-group">
-                  <input type="password"
-                         className="form-control"
-                         placeholder="Re-Enter password"
-                         onChange={this.onChange}
-                         value={this.state.password2}
-                         error={this.state.errors.password2}
-                         id="password2"
-                  />                  </div>
-                  <div class="d-flex justify-content-center my-3 form-group">
-                      <button type="submit" class="SignUp-button">Sign Up</button>
+                  <div className="my-3 form-group">
+                    <input type="password"
+                           className="form-control"
+                           placeholder="Re-Enter password"
+                           onChange={this.onChange}
+                           value={this.state.password2}
+                           error={this.state.errors.password2}
+                           id="password2"
+                    />
+                  </div>
+                  <div className="d-flex justify-content-center my-3 form-group">
+                      <button type="submit" className="SignUp-button">Sign Up</button>
                   </div>
                   <p className="forgot-password text-right">
                       Already registered <a href="/">sign in?</a>
                   </p>
+                  <label className="errorTxt" id = "errorTxt">
+                  </label>
               </form>
             </div>
           </div>
