@@ -2,24 +2,6 @@
   background-color: purple;
 }
 
- .body-wrapper{
-   align-content: center;
-   width: auto;
- }
-
- .SignUp-button{
- 	background-color: white;
- 	padding: 4px 30PX;
- 	border-radius: 5px;
- 	border-color: #1B998B;
- 	color: #1B998B;
- 	font-family: inherit;
- }
-
-.errorTxt{
-  color: red;
-  font-size: 14px;
-}
 
 .create-account-button{
 	background-color: white;
@@ -44,4 +26,4 @@
 .logo-img{
 	height: 18rem;
 	width: auto;
->>>>>>> master
+}
