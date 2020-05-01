@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const CreateAccount = () =>
+const JoinParty = () =>
     <div className="container d-flex align-items-center flex-column">
         <h1 className="mb-5">Join a Party</h1>
         <form className="d-flex flex-column align-items-center">
@@ -12,4 +12,4 @@ const CreateAccount = () =>
             <button type="button" name="" className="create-account-button my-4">Join Party!</button>
         </form>
     </div>
-export default CreateAccount;
+export default JoinParty;
