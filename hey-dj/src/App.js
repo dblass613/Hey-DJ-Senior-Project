@@ -15,6 +15,7 @@ import logo from './logo.svg';
 import './Stylesheets/App.css';
 import CreateAccount from './auth/Register';
 import './Stylesheets/bootstrap.css';
+import CreateParty from './components/dashboard/CreateParty';
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
             <Route exact path="/register" component = {Register}>
             </Route>
             <Route exact path="/dashboard" component = {Dashboard}>
+            </Route>
+            <Route exact path="/createParty" component = {CreateParty}>
             </Route>
           </Switch>
         </BrowserRouter>

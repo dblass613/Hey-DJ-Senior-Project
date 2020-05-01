@@ -72,7 +72,7 @@ class Register extends Component {
                 </div>
                 <form onSubmit={this.onSubmit}>
 
-                  <div className="my-3 form-group">
+                  <div className="my-3 mlxl mrxl mbs form-group">
                         <input
                           type="text"
                           className="form-control"
@@ -84,7 +84,7 @@ class Register extends Component {
 
                       />
                   </div>
-                  <div className="my-3 form-group">
+                  <div className="my-3 mlxl mrxl mbs form-group">
                   <input type="email"
                          className="form-control"
                          placeholder="Enter email"
@@ -93,7 +93,7 @@ class Register extends Component {
                          error={this.state.errors.email}
                          id="email"
                   />                  </div>
-                  <div className="my-3 form-group">
+                  <div className="my-3 mlxl mrxl mbs form-group">
                       <input type="password"
                              className="form-control"
                              placeholder="Enter password"
@@ -103,7 +103,7 @@ class Register extends Component {
                              id="password"
                       />
                   </div>
-                  <div className="my-3 form-group">
+                  <div className="my-3 mlxl mrxl mbs form-group">
                     <input type="password"
                            className="form-control"
                            placeholder="Re-Enter password"
@@ -114,12 +114,14 @@ class Register extends Component {
                     />
                   </div>
                   <div className="d-flex justify-content-center my-3 form-group">
-                      <button type="submit" className="SignUp-button">Sign Up</button>
+                      <button type="submit" className="SignUp-button">
+                      <a href="/dashboard">Sign Up</a>
+                      </button>
                   </div>
-                  <p className="forgot-password text-right">
+                  <p className="forgot-password text-align-center ">
                       Already registered <a href="/">sign in?</a>
                   </p>
-                  <label className="errorTxt" id = "errorTxt">
+                  <label className="errorTxt text-align-center" id = "errorTxt">
                   </label>
               </form>
             </div>

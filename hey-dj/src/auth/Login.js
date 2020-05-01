@@ -62,15 +62,15 @@ class Login extends Component {
 
     render() {
         return (
-              <div className="Full-width">
-                  <div className= "Logo-container justify-content-center">
+              <div className="Screen-format justify-content-center">
+                  <div className= "Logo-container">
                     <img className= "Logo-img" src={Logo}/>
                   </div>
                   <hr className= "mbm Full-width" color = "#1B998B"></hr>
                   <div className="container Login-body Screen-format my-3">
 
                     <form className ="justify-content-center" onSubmit = {this.onSubmit}>
-                        <div className="mbm" >
+                        <div className="mbm mlm mrm" >
                             <input
                               type="Email"
                               id="email"
@@ -81,7 +81,7 @@ class Login extends Component {
                               error={this.state.errors.email}
                             />
                         </div>
-                        <div className="mbm">
+                        <div className="mbm mlm mrm">
                             <input
                                 type="Password"
                                 id="password"

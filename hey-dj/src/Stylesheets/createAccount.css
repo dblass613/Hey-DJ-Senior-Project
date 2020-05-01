@@ -1,3 +1,18 @@
+.Screen-format{
+	width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+/* Not for mobile phones: */
+  .mrxl{
+    margin-right: 100px;
+  }
+
+  .mlxl{
+    margin-left: 100px;
+  }
+}
+
 .find{
   background-color: purple;
 }
@@ -15,7 +30,9 @@
  	color: #1B998B;
  	font-family: inherit;
  }
-
+.text-align-center{
+    text-align: center;
+}
 .errorTxt{
   color: red;
   font-size: 14px;
@@ -44,4 +61,4 @@
 .logo-img{
 	height: 18rem;
 	width: auto;
->>>>>>> master
+}
