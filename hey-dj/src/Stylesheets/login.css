@@ -1,3 +1,14 @@
+.Screen-format{
+	width: 700px;
+
+
+}
+
+.Login-body{
+	height: inherit;
+	display: block;
+}
+
 .login-link{
 	color: #1B998B;
 }
@@ -8,14 +19,31 @@
 	border-radius: 5px;
 	border-color: #1B998B;
 	color: #1B998B;
+	font-family: inherit;
+}
+
+.Full-width{
+	width: 100%;
+}
+
+.mbs{
+	margin-bottom: 20px;
+}
+.mbm{ /*margin bottom medium */
+	margin-bottom: 40px;
 }
 
 .login-button:focus{
 	box-shadow: 0px 0px 0px 2px #1B998B;
 }
 
-.login-text{
-	text-align:center;
+.Login-button:focus{
+	box-shadow: 0px 0px 0px 1px #1B998B;
+}
+
+.Login-text{
+	text-align: left;
+	font-family: helvetica;
 }
 
 .login-text:focus{
@@ -25,4 +53,23 @@
 .logo-img{
 	height: 18rem;
 	width: auto;
+}
+
+.Logo-container{
+	height: 170px;
+	width: auto;
+	display: flex;
+}
+
+.Spotify-btn{
+	background-color: green;
+	border-color: green;
+	border-style: solid;
+	border-radius: 20px;;
+	color: white;
+	align-self: center;
+}
+
+.Spotify-icon{
+	background-color: green;
 }
