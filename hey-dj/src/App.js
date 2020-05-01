@@ -10,6 +10,7 @@ import {
 import CreateAccount from './CreateAccount';
 import Login from './Login';
 import Dashboard from './Dashboard';
+import JoinParty from './JoinParty';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/create" component={CreateAccount}>
           </Route>
           <Route path="/dashboard" component={Dashboard}>
+          </Route>
+          <Route path="/join" component={JoinParty}>
           </Route>
         </Switch>
       </BrowserRouter>
