@@ -14,6 +14,8 @@ import Profile from "./components/Profile";
 import logo from './logo.svg';
 import './Stylesheets/App.css';
 import CreateAccount from './auth/Register';
+import './Stylesheets/bootstrap.css';
+
 
 function App() {
   return (
@@ -24,7 +26,7 @@ function App() {
           <Switch>
             <Route exact={true} path="/" component = {Login}>
             </Route>
-            <Route exact path="/register" component = {Register}> 
+            <Route exact path="/register" component = {Register}>
             </Route>
             <Route exact path="/dashboard" component = {Dashboard}>
             </Route>
