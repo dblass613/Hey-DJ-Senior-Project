@@ -11,6 +11,7 @@ import CreateAccount from './CreateAccount';
 import Login from './Login';
 import Dashboard from './Dashboard';
 import JoinParty from './JoinParty';
+import CreateParty from './CreateParty';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/dashboard" component={Dashboard}>
           </Route>
           <Route path="/join" component={JoinParty}>
+          <Route path="/createparty" component={CreateParty}>
           </Route>
         </Switch>
       </BrowserRouter>
