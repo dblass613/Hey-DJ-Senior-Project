@@ -12,6 +12,7 @@ import Login from './Login';
 import Dashboard from './Dashboard';
 import JoinParty from './JoinParty';
 import CreateParty from './CreateParty';
+import PartyDetails from './PartyDetails'
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
           <Route path="/dashboard" component={Dashboard}>
           </Route>
           <Route path="/join" component={JoinParty}>
+          </Route>
           <Route path="/createparty" component={CreateParty}>
+          </Route>
+          <Route path="/partydetails" component={PartyDetails}>
           </Route>
         </Switch>
       </BrowserRouter>
